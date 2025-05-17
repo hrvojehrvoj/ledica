@@ -125,7 +125,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen items-center justify-center gap-8 md:gap-12 bg-white p-4">
+    <div className="flex flex-col md:flex-row min-h-screen items-center justify-center gap-8 md:gap-12 bg-blue-100 p-4">
       {/* Input section */}
       <div className="flex flex-col w-full max-w-[350px] gap-4 mb-4 md:mb-0">
         <textarea
