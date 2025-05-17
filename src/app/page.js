@@ -125,9 +125,9 @@ export default function Home() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center gap-12 bg-white">
+    <div className="flex flex-col md:flex-row min-h-screen items-center justify-center gap-8 md:gap-12 bg-white p-4">
       {/* Input section */}
-      <div className="flex flex-col w-[350px] gap-4">
+      <div className="flex flex-col w-full max-w-[350px] gap-4 mb-4 md:mb-0">
         <textarea
           className="w-full h-64 border rounded p-2 text-black"
           placeholder="Paste your text here..."
@@ -140,11 +140,11 @@ export default function Home() {
           onClick={handleFormatText}
           disabled={loading || !inputText}
         >
-          {loading ? "Formatting..." : "Format & Preview"}
+          {loading ? "Setting the mood..." : "Set the mood"}
         </button>
       </div>
       {/* Hand SVG with scrollable text overlay */}
-      <div className="relative w-[350px] h-[700px] flex-shrink-0">
+      <div className="relative w-full max-w-[350px] h-[700px] flex-shrink-0 mb-4 md:mb-0">
         <HandSVGBackground />
         <div
           ref={scrollRef}
@@ -171,7 +171,7 @@ export default function Home() {
         </div>
       </div>
       {/* Bulb SVG */}
-      <div className="flex items-center justify-center w-[200px] h-[200px]">
+      <div className="flex items-center justify-center w-full max-w-[200px] h-[200px]">
         <BulbSVG color={bulbColor} />
       </div>
     </div>
